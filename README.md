@@ -129,22 +129,27 @@ To quantify the impact of social media hours on sleep, a linear regression model
 
 ---
 
-## 💡 Resultados y Conclusiones
+## 💡 Results and Conclusions
 
-Resume los hallazgos clave de tu análisis y el rendimiento de tu modelo final.
+Here is a summary of the key findings from the analysis and the final model performance.
 
-* **Resultados del EDA:** ¿Qué patrones interesantes encontraste? (Ej: "Los clientes con contratos mes a mes y fibra óptica tienen una tasa de abandono significativamente mayor").
-* **Rendimiento del Modelo:** ¿Cuál fue el mejor modelo y qué métricas obtuvo? (Ej: "El modelo Random Forest alcanzó una precisión del 82% en el conjunto de prueba").
-* **Conclusiones Finales:** ¿Qué respondiste de la pregunta de negocio inicial? Ofrece recomendaciones basadas en tus datos.
-
+* **EDA Results:** On average, students spend 4.91 hours daily on their phones, and the majority sleep between 6 and 8 hours per night.
+* **Model Performance:** The Linear Regression model achieved the following performance on the test set:
+    * **R-squared (R²):** **0.54**. This indicates that 54% of the variance in nightly sleep hours can be explained by the average daily hours of social media use.
+    * **Mean Squared Error (MSE):** **0.52**.
+* **Final Conclusions:** The model confirms a strong negative relationship (also seen in the r = -0.79 correlation) between social media use and sleep.
+    * The model's coefficient was **-0.72**. This implies that for every additional hour a student spends on social media per day, their average nightly sleep decreases by approximately 0.72 hours (about 43 minutes).
+    * The intercept of **10.43** suggests that, according to the model, a student with zero daily social media use would sleep approximately 10.43 hours per night.
+ 
 ---
 
-## 🚀 Trabajo Futuro
+## 🚀 Future Work
 
-(Opcional, pero muy recomendado)
+This analysis serves as a strong starting point. Future steps could include:
 
-Enumera posibles mejoras o siguientes pasos para el proyecto. Esto demuestra que piensas a largo plazo.
-* Probar con modelos más complejos (ej: redes neuronales).
-* Recolectar más datos para mejorar la predicción.
-* Desplegar el modelo como una API web.
+* **Expand the Model:** Include more variables to see how they interact and affect not only sleep hours but also `Academic_Performance` and `Mental_Health_Score`.
+* **Develop Intervention Programs:** Use the model's findings as a basis for early intervention programs that can identify students at higher risk of their academic performance being affected based on their usage patterns.
+* **Conduct Deeper Research:** Use this project as a starting point to explore the specific mechanisms of social media's impact or to investigate the effectiveness of different interventions (e.g., reducing screen time vs. offering other non-screen alternatives).
+* **Personal Project Foundation:** Continue to build on this analysis, combining it with other datasets to inform future research and intervention projects.
+
 
