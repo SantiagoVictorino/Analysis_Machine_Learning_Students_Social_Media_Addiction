@@ -19,13 +19,13 @@
 ## 🎯 Problem Statement and Objectives
 
 ### Research question
-En este proyecto se intentará resolver la siguiente pregunta: ¿Qué influencia tiene el promedio de horas de uso de las redes sociales diarias sobre el promedio de las horas de sueño nocturno?
+This project will attempt to answer the following question: What influence does the average daily hours of social media use have on the average hours of nightly sleep?
 
-### Objetivos
+### Objectives
 
-1.  **Exploratory Aata Analysis (EDA):** Identificar las características y las variables que pueden llegar a ser afectadas por el uso diario de las redes sociales.
-2.  **Statistical Analysis:** Hacer un análisis estadístico utilizando el coeficiente de correlación r de Pearson para medir la fuerza y dirección de la relación entre las variables.
-3.  **Machine Learning model:** Implementar y entrenar un modelo de machine learning para conocer en profundidad la relación y determinar que tan significativa es.
+1.  **Exploratory Data Analysis (EDA):** To identify the characteristics and variables that may be affected by daily social media usage.
+2.  **Statistical Analysis:** To perform a statistical analysis using the Pearson r correlation coefficient to measure the strength and direction of the relationship between variables.
+3.  **Machine Learning Model:** To implement and train a machine learning model to gain an in-depth understanding of the relationship and determine its significance.
 
 ---
 
@@ -33,19 +33,19 @@ En este proyecto se intentará resolver la siguiente pregunta: ¿Qué influencia
 
 * **Dataset source:** Kaggle - (https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships).
 * **Size** 705 rows x 13 columns.
-* **Description:** Cada fila representa un estudiante único mientras que las columnas indican distintas caracateristicas de cada estudiante como por ejemplo la ubicacion geografica, la edad, el promedio de uso de redes sociales, el promedio de horas de sueño nocturnas, etc.
+* **Description:** Each row represents a unique student, while the columns indicate different characteristics of each student, such as their geographic location, age, average social media usage, average nightly sleep hours, etc.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
-* **Lenguaje:** Python 3.
-* **Librerías Principales:**
-    * **Pandas:** Para la manipulación y limpieza de datos.
-    * **NumPy:** Para operaciones numéricas eficientes.
-    * **Matplotlib & Seaborn:** Para la visualización de datos.
-    * **Scikit-learn:** Para el modelado de Machine Learning (preprocesamiento, entrenamiento y evaluación).
-* **Entorno:** Google Colab
+* **Language:** Python 3
+* **Main Libraries:**
+    * **Pandas:** For data manipulation and cleaning.
+    * **NumPy:** For efficient numerical operations.
+    * **Matplotlib & Seaborn:** For data visualization.
+    * **Scikit-learn:** For Machine Learning modeling (preprocessing, training, and evaluation).
+* **Environment:** Google Colab
 
 ---
 
