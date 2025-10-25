@@ -82,7 +82,7 @@ This project followed a defined structure to clean, analyze, model, and draw con
 
 ### 1. Dataset Loading and Selection
 * **Library Imports:** Necessary libraries for analysis were imported, including `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`, and `sklearn`.
-* **Data Loading:** The dataset (`Students Social Media Addiction.csv`) was loaded into a pandas DataFrame from Google Drive.
+* **Data Loading:** The dataset (`Students Social media Addiction.csv`) was loaded into a pandas DataFrame directly from the project's GitHub repository URL.
 * **Variable Definition:** A variable dictionary was established to provide a clear reference for the meaning of each column in the dataset.
 
 ### 2. Data Cleaning and Preprocessing
@@ -125,7 +125,12 @@ To quantify the impact of social media hours on sleep, a linear regression model
 
 ### 5. Evaluation and Communication of Results
 * **Prediction and Evaluation:**
-    * The trained model was used to make predictions (`.predict()`) on the test set (`X_test`) [cite: uploaded:Proyect_Data_Science
+    * The trained model was used to make predictions (`.predict()`) on the test set (`X_test`).
+    * Model performance was evaluated by calculating the Mean Squared Error (MSE) and the R-squared (R²) coefficient.
+* **Interpretation:**
+    * The model's intercept (`model.intercept_`) and coefficient (`model.coef_`) were extracted to interpret the quantitative relationship.
+    * The coefficient of **-0.72** confirmed the negative relationship: for every additional hour on social media, average nightly sleep decreases by approximately 0.72 hours.
+* **Final Visualization:** A final scatter plot was generated, including the linear regression line fitted by the model against the real data.
 
 ---
 
