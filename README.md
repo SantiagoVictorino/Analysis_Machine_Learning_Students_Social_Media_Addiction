@@ -6,7 +6,7 @@
 **Course:** Data Science
 **Date:** 10/2025
 
-[![Open In Colab](https://colab.research.google.com/drive/1xwCea1d-5q-M-VJYtyD3yR4aAza7rFWl?usp=sharing)](https://colab.research.google.com/github/SantiagoVictorino/Analysis_Machine_Learning_Students_Social_Media_Addiction/blob/main/[Proyect_Data_Science_Students_Media_Addiction.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SantiagoVictorino/Analysis_Machine_Learning_Students_Social_Media_Addiction/blob/main/Proyect_Data_Science_Students_Social_Media_Addiction.ipynb)
 
 ---
 
