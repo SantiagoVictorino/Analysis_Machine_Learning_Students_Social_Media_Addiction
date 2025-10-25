@@ -49,25 +49,30 @@ This project will attempt to answer the following question: What influence does 
 
 ---
 
-## ⚙️ Instalación y Use
+## ⚙️ Installation and Use
 
-Explica cómo otra persona puede ejecutar tu proyecto. Dado que usaste Colab, la forma más fácil es enlazar directamente a tu notebook.
+There are two main ways to run this project:
 
-1.  **Clonar el repositorio (opcional):**
+### 1. Open in Google Colab (Recommended)
+This is the simplest way. You can open the notebook directly in your browser by clicking the badge below. The notebook is configured to load the dataset directly from this GitHub repository, so it will run without any setup.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SantiagoVictorino/Analysis_Machine_Learning_Students_Social_Media_Addiction/blob/main/Proyect_Data_Science_Students_Social_Media_Addiction.ipynb)
+
+### 2. Run Locally
+If you prefer to run it on your own machine:
+
+1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/](https://github.com/)[TU_USUARIO_GITHUB]/[TU_REPOSITORIO].git
+    git clone [https://github.com/SantiagoVictorino/Analysis_Machine_Learning_Students_Social_Media_Addiction.git](https://github.com/SantiagoVictorino/Analysis_Machine_Learning_Students_Social_Media_Addiction.git)
+    cd Analysis_Machine_Learning_Students_Social_Media_Addiction
     ```
-2.  **Abrir en Google Colab:**
-    La forma más sencilla de ejecutar este proyecto es haciendo clic en el siguiente botón para abrir el notebook directamente en Google Colab:
-
-    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/[TU_USUARIO_GITHUB]/[TU_REPOSITORIO]/blob/main/[NOMBRE_DE_TU_NOTEBOOK].ipynb)
-
-3.  **Instalar dependencias:**
-    Si hay alguna librería que no venga por defecto en Colab, indica cómo instalarla:
-    ```python
-    !pip install -r requirements.txt
+2.  **Install dependencies:**
+    This project uses standard data science libraries, which are listed in the notebook imports. You can install them using pip:
+    ```bash
+    pip install pandas numpy matplotlib seaborn plotly scikit-learn
     ```
-    *(Asegúrate de tener un archivo `requirements.txt` en tu repositorio).*
+3.  **Run the Notebook:**
+    Launch Jupyter Notebook or Jupyter Lab and open the `Proyect_Data_Science_Students_Social_Media_Addiction.ipynb` file. The notebook is set up to read the CSV file from the `data/` folder in the repository.
 
 ---
 
