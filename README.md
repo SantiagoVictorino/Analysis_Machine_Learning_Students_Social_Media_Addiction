@@ -2,23 +2,23 @@
 
 
 
-**Autor:** Santiago Nahuel Victorino
-**Curso:** Data Science
-**Fecha:** 10/2025
+**Author:** Santiago Nahuel Victorino
+**Course:** Data Science
+**Date:** 10/2025
 
 [![Open In Colab](https://colab.research.google.com/drive/1xwCea1d-5q-M-VJYtyD3yR4aAza7rFWl?usp=sharing)](https://colab.research.google.com/github/SantiagoVictorino/Analysis_Machine_Learning_Students_Social_Media_Addiction/blob/main/[Proyect_Data_Science_Students_Media_Addiction.ipynb)
 
 ---
 
-## 📝 Descripción del Proyecto
+## 📝 Project Description
 
 > This project analyzes a database on the consequences of social media use among students. The objective is to address the influence of average hours of social media use on average hours of sleep per night, building a machine learning model to discover the magnitude of that influence.
 
 ---
 
-## 🎯 Planteamiento del Problema y Objetivos
+## 🎯 Problem Statement and Objectives
 
-### Pregunta de investigación
+### Research question
 En este proyecto se intentará resolver la siguiente pregunta: ¿Qué influencia tiene el promedio de horas de uso de las redes sociales diarias sobre el promedio de las horas de sueño nocturno?
 
 ### Objetivos
@@ -49,7 +49,7 @@ En este proyecto se intentará resolver la siguiente pregunta: ¿Qué influencia
 
 ---
 
-## ⚙️ Instalación y Uso
+## ⚙️ Instalación y Use
 
 Explica cómo otra persona puede ejecutar tu proyecto. Dado que usaste Colab, la forma más fácil es enlazar directamente a tu notebook.
 
@@ -71,40 +71,56 @@ Explica cómo otra persona puede ejecutar tu proyecto. Dado que usaste Colab, la
 
 ---
 
-## 🔬 Metodología: El Paso a Paso
+## 🔬 Methodology: The Step-by-Step
 
-Esta es la sección más importante. Detalla las fases de tu proyecto de forma clara y ordenada.
+This project followed a defined structure to clean, analyze, model, and draw conclusions from the data.
 
-### 1. Limpieza y Preprocesamiento de Datos
-* Manejo de valores nulos (missing values).
-* Corrección de tipos de datos.
-* Codificación de variables categóricas (ej: One-Hot Encoding, Label Encoding).
-* Detección y tratamiento de outliers (si aplica).
+### 1. Dataset Loading and Selection
+* **Library Imports:** Necessary libraries for analysis were imported, including `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`, and `sklearn`.
+* **Data Loading:** The dataset (`Students Social Media Addiction.csv`) was loaded into a pandas DataFrame from Google Drive.
+* **Variable Definition:** A variable dictionary was established to provide a clear reference for the meaning of each column in the dataset.
 
-### 2. Análisis Exploratorio de Datos (EDA)
-* Análisis univariado y bivariado para entender la distribución de las variables.
-* Visualización de las relaciones entre las características y la variable objetivo (`Churn`).
-* **Incluye aquí 1 o 2 de tus gráficos más importantes.** Puedes hacer una captura de pantalla del gráfico en tu Colab, subirla a tu repositorio de GitHub y enlazarla así:
-    ```markdown
-    ![Distribución de Churn por tipo de contrato](imagenes/grafico1.png)
-    ```
+### 2. Data Cleaning and Preprocessing
+An exhaustive cleaning process was performed to ensure data quality before analysis:
+* **Null Values:** `df.isnull().sum()` was used to check for missing values. The analysis determined there was no null data in the set.
+* **Categorical Inconsistencies:** The unique values (`.unique()`) of all categorical columns (like 'Gender', 'Academic_Level', etc.) were reviewed for typos or inconsistencies. None were found.
+* **Whitespace Removal:** The `.str.strip()` function was applied to all object-type columns to remove leading or trailing whitespaces that could affect the analysis.
+* **Outlier Handling:**
+    * Box plots were generated for all numerical variables.
+    * Using the Interquartile Range (IQR) method, 3 outliers were identified in the `Avg_Daily_Usage_Hours` column.
+    * These outliers were removed, creating a new clean dataframe (`df_cleaned`) with 702 rows for the analysis.
+* **Final Verification:** A final check was run on `df_cleaned` to confirm the absence of nulls, the consistency of categories, and the removal of outliers.
 
-### 3. Feature Engineering
-* Creación de nuevas características a partir de las existentes.
-* Escalado de datos numéricos (ej: StandardScaler, MinMaxScaler).
+### 3. Statistical and Exploratory Data Analysis (EDA)
+This phase focused on understanding the data and discovering relationships between variables.
 
-### 4. Modelado y Entrenamiento
-* División del dataset en conjuntos de entrenamiento y prueba (`train_test_split`).
-* Modelos probados (ej: Regresión Logística, Random Forest, XGBoost).
-* Explicación breve de por qué elegiste esos modelos.
-* Menciona si usaste técnicas como Cross-Validation para asegurar la robustez del modelo.
+* **Descriptive Analysis (Numerical):**
+    * Descriptive statistics (`.describe()`) were calculated for key numerical variables, such as 'Age', 'Avg_Daily_Usage_Hours', 'Sleep_Hours_Per_Night', 'Mental_Health_Score', 'Conflicts_Over_Social_Media', and 'Addicted_Score'.
+    * Histograms and ECDF (Empirical Cumulative Distribution Function) plots were generated to visualize the distribution of each of these variables.
 
-### 5. Evaluación del Modelo
-* Métricas utilizadas para evaluar el rendimiento (Accuracy, Precisión, Recall, F1-Score, Curva ROC).
-* Presentación de los resultados, por ejemplo, con una matriz de confusión.
-    ```markdown
-    ![Matriz de Confusión del Modelo Final](imagenes/matriz_confusion.png)
-    ```
+* **Descriptive Analysis (Categorical):**
+    * Frequency and proportion counts (`.value_counts()`) were calculated for categorical variables.
+    * Count plots (`sns.countplot`) were created to visualize the distribution of 'Gender', 'Academic_Level', 'Most_Used_Platform', 'Affects_Academic_Performance', and 'Relationship_Status'. For the 'Country' variable, a Top 15 chart was plotted.
+
+* **Bivariate and Correlation Analysis:**
+    * The Pearson correlation coefficient between `Avg_Daily_Usage_Hours` and `Sleep_Hours_Per_Night` was calculated, resulting in **-0.79**, indicating a strong negative relationship.
+    * A scatter plot (`sns.scatterplot`) was generated between these two variables to visually observe this relationship.
+
+### 4. Machine Learning Modeling (Linear Regression)
+To quantify the impact of social media hours on sleep, a linear regression model was implemented.
+
+* **Problem Definition:** The research question was posed: "How do daily social media usage hours affect nightly sleep hours among students?".
+* **Feature Selection:**
+    * The predictor variable (X) was defined as `Avg_Daily_Usage_Hours`.
+    * The target variable (y) was defined as `Sleep_Hours_Per_Night`.
+* **Data Splitting:** The `df_cleaned` dataset was split into training (80%) and test (20%) sets using `train_test_split`.
+* **Model Training:**
+    * A `LinearRegression` model instance from `sklearn` was imported and created.
+    * The model was trained on the `X_train` and `y_train` data using the `.fit()` method.
+
+### 5. Evaluation and Communication of Results
+* **Prediction and Evaluation:**
+    * The trained model was used to make predictions (`.predict()`) on the test set (`X_test`) [cite: uploaded:Proyect_Data_Science
 
 ---
 
