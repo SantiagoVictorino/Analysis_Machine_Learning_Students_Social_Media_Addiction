@@ -31,22 +31,15 @@ En este proyecto se intentará resolver la siguiente pregunta: ¿Qué influencia
 
 ## 📊 Dataset
 
-Describe el conjunto de datos que utilizaste.
-
-* **Dataset source:** https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships
-* **Description:** Cada fila representa a un estudiantes mientras las columnas son las distintas variables relacionadas
-* **Tamaño:** Número de filas y columnas.
-
-*Ejemplo:*
-> El dataset fue obtenido de [Fuente de Datos, por ejemplo, Kaggle](link-al-dataset). Contiene 7043 registros de clientes, con 21 columnas que describen información demográfica del cliente, los servicios contratados, y si el cliente abandonó la empresa o no (columna `Churn`).
+* **Dataset source:** Kaggle - (https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships).
+* **Size** 705 rows x 13 columns.
+* **Description:** Cada fila representa un estudiante único mientras que las columnas indican distintas caracateristicas de cada estudiante como por ejemplo la ubicacion geografica, la edad, el promedio de uso de redes sociales, el promedio de horas de sueño nocturnas, etc.
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-Lista las herramientas, lenguajes de programación y librerías principales que usaste.
-
-* **Lenguaje:** Python 3.x
+* **Lenguaje:** Python 3.
 * **Librerías Principales:**
     * **Pandas:** Para la manipulación y limpieza de datos.
     * **NumPy:** Para operaciones numéricas eficientes.
